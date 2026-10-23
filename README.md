@@ -1,6 +1,6 @@
 ## Hi there 👋
 
-### Open Source
+### Repo Contributions (Commits, PRs, Issues)
 
 <!-- Auto-updated SVG showing upstream repos I've contributed to (Commits, PRs, Issues) -->
 ![Repo Contributions](/github-metrics-contributions.svg)
