@@ -1,0 +1,38 @@
+name: GitHub Metrics (Repo Contributions)
+
+on:
+  # Automatically updates every 24 hours at midnight UTC
+  schedule:
+    - cron: "0 0 * * *"
+  # Allows you to trigger it immediately from the Actions tab
+  workflow_dispatch:
+  # Also runs when you push changes to your main branch
+  push:
+    branches: ["main", "master"]
+
+jobs:
+  github-metrics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Generate Notable Repo Contributions SVG
+        uses: lowlighter/metrics@latest
+        with:
+          # Output file committed to the root of your repo
+          filename: github-metrics-contributions.svg
+          token: ${{ secrets.METRICS_TOKEN }}
+
+          # Disable the bulky default header so the card focuses strictly on contributions
+          base: ""
+
+          # Enable the Notable Contributions plugin
+          plugin_notable: yes
+          # Include repo name alongside organization avatar (e.g., deepinv/deepinv)
+          plugin_notable_repositories: yes
+          # Indepth mode counts Issues & PRs in addition to commits
+          plugin_notable_indepth: yes
+          # Track Commits, Issues, and Pull Requests across upstream repos
+          plugin_notable_types: commit, issue, pr
+          # Exclude your own personal repos so only external/org contributions appear
+          plugin_notable_self: no
