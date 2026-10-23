@@ -36,3 +36,5 @@ jobs:
           plugin_notable_types: commit, issue, pr
           # Exclude your own personal repos so only external/org contributions appear
           plugin_notable_self: no
+          # Removes any title text inside the card graphic itself
+          plugin_notable_title: ""
