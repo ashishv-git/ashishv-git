@@ -33,8 +33,11 @@ jobs:
           # Indepth mode counts Issues & PRs in addition to commits
           plugin_notable_indepth: yes
           # Track Commits, Issues, and Pull Requests across upstream repos
-          plugin_notable_types: commit, issue, pr
+          plugin_notable_types: commit, issue, pull_request
           # Exclude your own personal repos so only external/org contributions appear
           plugin_notable_self: no
-          # Removes any title text inside the card graphic itself
-          plugin_notable_title: ""
+          # Hide the "Notable Contributions" heading
+          extras_css: |
+            h2 {
+              display: none !important;
+            }
