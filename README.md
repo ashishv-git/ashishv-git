@@ -1,5 +1,10 @@
 ## Hi there 👋
 
+### Open Source Contributions
+
+<!-- Auto-updated SVG showing upstream repos I've contributed to (Commits, PRs, Issues) -->
+![Repo Contributions](/github-metrics-contributions.svg)
+
 <!--
 **ashishv-git/ashishv-git** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
