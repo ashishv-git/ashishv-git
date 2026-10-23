@@ -21,7 +21,7 @@ jobs:
         with:
           # Output file committed to the root of your repo
           filename: github-metrics-contributions.svg
-          token: ${{ secrets.METRICS_TOKEN }}
+          token: ${{ secrets.METRICS_TOKEN_CLASSIC }}
 
           # Disable the bulky default header so the card focuses strictly on contributions
           base: ""
